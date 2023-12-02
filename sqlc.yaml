@@ -1,0 +1,11 @@
+version: "2"
+sql:
+  - engine: "sqlite"
+    queries: "./sql"
+    schema: "./sql"
+    database:
+      uri: postgresql://postgres:${PG_PASSWORD}@localhost:5432/authors
+    gen:
+      go:
+        package: "sqlite3"
+        out: "sqlite3"
